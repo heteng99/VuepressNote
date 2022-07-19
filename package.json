@@ -6,7 +6,12 @@
   "repository": "git@gitee.com:hhteng/my-vuepress.git",
   "author": "liamhu <liamhu@tencent.com>",
   "license": "MIT",
-  "dependencies": {
+  "scripts": {
+    "docs:build": "npx vuepress build docs",
+    "docs:dev": "npx vuepress dev docs"
+  },
+  "dependencies": {},
+  "devDependencies": {
     "vuepress": "^1.9.7"
   }
 }
