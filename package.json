@@ -1,0 +1,12 @@
+{
+  "name": "my-vuepress",
+  "version": "1.0.0",
+  "description": "✏️write sth.",
+  "main": "index.js",
+  "repository": "git@gitee.com:hhteng/my-vuepress.git",
+  "author": "liamhu <liamhu@tencent.com>",
+  "license": "MIT",
+  "dependencies": {
+    "vuepress": "^1.9.7"
+  }
+}
