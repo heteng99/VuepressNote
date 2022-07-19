@@ -10,7 +10,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-  job
+
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - name: checkout
@@ -19,7 +19,7 @@ jobs:
       - name: install node.js
         uses: actions/setup-node@v3.0.0 
         with: 
-            node-version: "14.X"
+            node-version: 14
 
       - name: install yarn
         run: npm install yarn
