@@ -1,4 +1,4 @@
 module.exports = {
-    title: "hht's website",
+    title: "☀️delighting",
     description: "KFC crazy Thursday v me 50 plz",
 }
