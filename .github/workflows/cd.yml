@@ -1,0 +1,49 @@
+# This is a basic workflow to help you get started with Actions
+ 
+name: browser-home-page
+
+on:
+  push:
+    branches: [ master ]
+  workflow_dispatch:
+ 
+jobs:
+  build:
+    runs-on: ubuntu-latest
+  job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - name: checkout
+        uses: actions/checkout@v2
+
+      - name: install node.js
+        uses: actions/setup-node@v3.0.0 
+        with: 
+            node-version: "14.X"
+
+      - name: install yarn
+        run: npm install yarn
+
+      - name: install pkg
+        run: npx yarn install
+
+      - name: build app
+        run: npx yarn docs:build
+
+      # - name: copy file via ssh key
+      #   uses: appleboy/scp-action@master
+      #   with:
+	    #       # Deploy
+      #       source: 'docs/.vuepress/dist/*'
+      #       # SSH address
+      #       host: ${{ secrets.REMOTE_HOST }}
+      #       # Remote dir path
+      #       target: ${{ secrets.REMOTE_PATH }}
+      #       # SSH Port
+      #       port: 22
+      #       # SSH User
+      #       username: ${{ secrets.USER_NAME }}
+      #       # SSH User password
+      #       password: ${{ secrets.PASSWORD }}
+            # SSH key
+            #key: ${{ secrets.SSH_KEY }}
