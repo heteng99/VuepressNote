@@ -1,17 +1,17 @@
 {
-  "name": "my-vuepress",
-  "version": "1.0.0",
-  "description": "✏️write sth.",
-  "main": "index.js",
-  "repository": "git@gitee.com:hhteng/my-vuepress.git",
-  "author": "liamhu <liamhu@tencent.com>",
+  "name": "vuepress",
+  "version": "2.0.0",
+  "description": "Demo for vuepress-theme-reco@2.x.",
+  "repository": "git@github.com:recoluan/vuepress-theme-reco-demo.git",
+  "author": "hht",
   "license": "MIT",
   "scripts": {
-    "docs:build": "npx vuepress build docs",
-    "docs:dev": "npx vuepress dev docs"
+    "dev": "vuepress dev .",
+    "start": "vuepress dev .",
+    "build": "vuepress build ."
   },
-  "dependencies": {},
-  "devDependencies": {
-    "vuepress": "^1.9.7"
+  "dependencies": {
+    "vuepress": "2.0.0-beta.48",
+    "vuepress-theme-reco": "2.0.0-beta.21"
   }
 }
