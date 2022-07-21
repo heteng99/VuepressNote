@@ -1,5 +1,5 @@
 module.exports = {
-  "title": "Blog",
+  "title": "crocoble",
   "description": "gugugu",
   "dest": "dist",
   "head": [
@@ -89,7 +89,7 @@ module.exports = {
     // "logo": "/logo.png",
     "search": true,
     "searchMaxSuggestions": 10,
-    "lastUpdated": "unknown",
+    "lastUpdated": "hht",
     "author": "hht",
     "authorAvatar": "/avatar.jpeg",
     "record": "gugugu",

@@ -25,8 +25,9 @@ $ git status
 # output: 查表
 $ git status -s
 ```
-
+:::tip
 查看[状态对照表](https://git-scm.com/docs/git-status)
+:::
 
 ## 远程仓库操作 git remote
 
@@ -106,18 +107,6 @@ $ git fetch <远程仓库的别名>
 $ git fetch <远程主机名> <分支名>
 ```
 
-## 合并 git merge 
-
-```bash
-$ git merge <分支名称>
-```
-
-终止 MERGING 状态
-
-```bash
-$ git merge --abort
-```
-
 ## 拉取合并 git pull 
 
 相当于先 `git fetch` 再 `git merge`
@@ -162,15 +151,36 @@ $ git checkout --orphan <分支名称>
 $ git checkout <文件路径>
 ```
 
+## 合并 git merge 
+
+```bash
+$ git merge <分支名称>
+```
+
+终止 MERGING 状态
+
+```bash
+$ git merge --abort
+```
+
+## 变基操作 git rebase
+```bash
+# 将当前分支的 commits 变基到目标分支
+$ git rebase <目标分支> [<源分支>]
+
+# 取出 client 分支，找出它从 server 分支分歧之后的补丁
+# 然后把这些补丁在 master 分支上重放一遍
+# 让 client 看起来像直接基于 master 修改一样
+$ git rebase --onto master server client
+```
+
 ## 显示信息 git log
 
 ```bash
-$ git log --oneline --graph -<指定数量>
+$ git log [--oneline] [--graph] [-<指定数量>]
 ```
 
-## git reset
-
-还原提交记录
+## 重置提交 git reset
 
 ```bash
 # 重置暂存区，但文件不受影响
@@ -188,7 +198,7 @@ $ git reset --soft <commit ID>
 $ git reset --hard <commit ID>
 ```
 
-## git revert
+## 撤回提交 git revert
 
 生成一个**新的提交**来撤销某次提交
 
@@ -197,7 +207,7 @@ $ git reset --hard <commit ID>
 $ git revert <commit ID>
 ```
 
-## git tag
+## 标签 git tag
 
 ```bash
 # 打印所有的标签
