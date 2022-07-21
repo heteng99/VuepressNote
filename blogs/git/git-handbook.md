@@ -2,13 +2,14 @@
 title: git 常用命令
 date: 2022/07/21
 author: hht
+sidebar: 'auto'
 tags:
  - git
 categories: 
  - git
 ---
 
-### 初始化 git init
+## 初始化 git init
 
 初始化目录，生成 .git 目录
 
@@ -16,7 +17,7 @@ categories:
 $ git init
 ```
 
-### 本地仓库状态 git status
+## 本地仓库状态 git status
 
 ```bash
 # 查看本地仓库的状态
@@ -27,7 +28,7 @@ $ git status -s
 
 查看[状态对照表](https://git-scm.com/docs/git-status)
 
-### 远程仓库操作 git remote
+## 远程仓库操作 git remote
 
 ```bash
 # 列出已经存在的远程仓库
@@ -45,7 +46,7 @@ $ git remote remove <远程仓库的别名>
 $ git remote set-url <远程仓库的别名> <新的远程仓库URL地址>
 ```
 
-### 添加至暂存区 git add
+## 添加至暂存区 git add
 
 把要提交的文件的信息添加到**暂存区**中
 
@@ -64,7 +65,7 @@ $ git add -i [<文件路径>]
 $ git add --interactive [<文件路径>]
 ```
 
-### 提交到本地仓库 git commit
+## 提交到本地仓库 git commit
 
 将**暂存区**中的文件提交到**本地仓库**中
 
@@ -82,7 +83,7 @@ $ git add .
 $ git commit --amend
 ```
 
-### 推送至远程仓库 git push
+## 推送至远程仓库 git push
 
 ```bash
 # 把本地仓库的分支推送到远程仓库的指定分支
@@ -94,7 +95,7 @@ $ git push <远程仓库的别名> :<远程分支名>
 $ git push <远程仓库的别名> --delete <远程分支名>
 ```
 
-### 拉取 git fetch 
+## 拉取 git fetch 
 
 从远程仓库获取最新的版本到本地的临时分支（tmp）上
 
@@ -105,7 +106,7 @@ $ git fetch <远程仓库的别名>
 $ git fetch <远程主机名> <分支名>
 ```
 
-### 合并 git merge 
+## 合并 git merge 
 
 ```bash
 $ git merge <分支名称>
@@ -117,7 +118,7 @@ $ git merge <分支名称>
 $ git merge --abort
 ```
 
-### 拉取合并 git pull 
+## 拉取合并 git pull 
 
 相当于先 `git fetch` 再 `git merge`
 
@@ -125,7 +126,7 @@ $ git merge --abort
 $ git pull --all
 ```
 
-### 分支操作 git branch 
+## 分支操作 git branch 
 
 ```bash
 # 列出本地的所有分支，当前所在分支以 "*" 标出
@@ -147,7 +148,7 @@ $ git branch -D <分支名称>
 $ git branch --set-upstream-to=<远程仓库名>/<分支名称> <远程分支名称>
 ```
 
-### 切换分支 git checkout
+## 切换分支 git checkout
 
 ```bash
 # 切换到已存在的指定分支
@@ -161,13 +162,13 @@ $ git checkout --orphan <分支名称>
 $ git checkout <文件路径>
 ```
 
-### 显示信息 git log
+## 显示信息 git log
 
 ```bash
 $ git log --oneline --graph -<指定数量>
 ```
 
-### git reset
+## git reset
 
 还原提交记录
 
@@ -187,7 +188,7 @@ $ git reset --soft <commit ID>
 $ git reset --hard <commit ID>
 ```
 
-### git revert
+## git revert
 
 生成一个**新的提交**来撤销某次提交
 
@@ -196,7 +197,7 @@ $ git reset --hard <commit ID>
 $ git revert <commit ID>
 ```
 
-### git tag
+## git tag
 
 ```bash
 # 打印所有的标签
@@ -217,7 +218,7 @@ $ git push <远程仓库的别名> <标签名称>
 $ git push <远程仓库的别名> –-tags
 ```
 
-### 获取最新代码并覆盖
+## 获取最新代码并覆盖
 
 ```bash
 $ git fetch
