@@ -2,6 +2,15 @@ module.exports = {
   "title": "crocoble",
   "description": "gugugu",
   "dest": "dist",
+  "markdown": {
+    lineNumbers: true,
+    extendMarkdown: md => {
+      md.set({
+        html: true
+      })
+      md.use(require('markdown-it-katex'))
+    },
+  },
   "head": [
     [
       "link",
@@ -16,7 +25,9 @@ module.exports = {
         "name": "viewport",
         "content": "width=device-width,initial-scale=1,user-scalable=no"
       }
-    ]
+    ],
+    ['link', { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css' }],
+    ['link', { rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/github-markdown-css/2.2.1/github-markdown.css' }]
   ],
   "theme": "reco",
   "themeConfig": {
@@ -31,16 +42,6 @@ module.exports = {
         "link": "/timeline/",
         "icon": "reco-date"
       },
-      // {
-      //   "text": "Docs",
-      //   "icon": "reco-message",
-      //   "items": [
-      //     {
-      //       "text": "vuepress-reco",
-      //       "link": "/docs/theme-reco/"
-      //     }
-      //   ]
-      // },
       {
         "text": "Contact",
         "icon": "reco-message",
@@ -53,14 +54,6 @@ module.exports = {
         ]
       }
     ],
-    // "sidebar": {
-    //   "/docs/theme-reco/": [
-    //     "",
-    //     "theme",
-    //     "plugin",
-    //     "api"
-    //   ]
-    // },
     "type": "blog",
     "blogConfig": {
       "category": {
@@ -72,20 +65,6 @@ module.exports = {
         "text": "Tag"
       }
     },
-    // "friendLink": [
-    //   {
-    //     "title": "午后南杂",
-    //     "desc": "Enjoy when you can, and endure when you must.",
-    //     "email": "1156743527@qq.com",
-    //     "link": "https://www.recoluan.com"
-    //   },
-    //   {
-    //     "title": "vuepress-theme-reco",
-    //     "desc": "A simple and beautiful vuepress Blog & Doc theme.",
-    //     "avatar": "https://vuepress-theme-reco.recoluan.com/icon_vuepress_reco.png",
-    //     "link": "https://vuepress-theme-reco.recoluan.com"
-    //   }
-    // ],
     // "logo": "/logo.png",
     "search": true,
     "searchMaxSuggestions": 10,
@@ -95,7 +74,4 @@ module.exports = {
     "record": "gugugu",
     "startYear": "2018"
   },
-  "markdown": {
-    "lineNumbers": true
-  }
 }
