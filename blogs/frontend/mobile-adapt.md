@@ -20,11 +20,16 @@ $$PPI=\frac{\sqrt{1366^2 + 768^2}}{13}=120.54$$
 <p style="text-align: justify">&emsp;&emsp;如果你有使用计算机的经验，那很有可能有过手动调整显示分辨率的经历。修改分辨率又是怎么一回事呢？假设设备的分辨率为 1366 * 768，你把它调为 800 * 600，操作系统会通过抖动算法将多个物理像素输出为 1 个<b>逻辑像素</b>，也就是说，在调低分辨率后，1 个逻辑像素只显示一种颜色，但它可能由多个物理像素组成。</p>
 
 ### 1.4 设备独立像素与 CSS 像素
-<p style="text-align: justify">&emsp;&emsp;CSS 样式代码中最常见的单位「px」通常就是指<b>设备独立像素（Device Independent Pixel(s)，简称 dip(s)）</b>，又称为<b>逻辑像素</b>。</p>
-<p style="text-align: justify">&emsp;&emsp;为什么会有这个单位呢？在没出现视网膜屏幕前，其实并没有设备像素和设备独立像素的区分，因为他们都是一样的。但是当出现了视网膜，甚至更高 PPI 值的屏幕后，屏幕上分布的像素点越来越多，如果你仍然用 CSS 的 1px 来表示设备上的 1px 物理像素点，那么在一个低 PPI 值的屏幕上和高 PPI 值的屏幕上，在两个屏幕上显示就很大差别了，如在低 PPI 屏上正常显示，另一个就会十分小。为了解决这个问题，就区分出两个概念了。</p>
-<p style="text-align: justify">&emsp;&emsp;至于要以多少个设备像素组成一个设备独立像素，需要引入<b>设备像素比（Device Pixel Ratio）</b>的概念来解释。</p>
+<p style="text-align: justify">&emsp;&emsp;CSS 样式代码中最常见的单位「px」通常就是指<b>DIP(s)（Device Independent Pixel(s)，设备独立像素）</b>，又称为<b>逻辑像素</b>。</p>
+<p style="text-align: justify">&emsp;&emsp;为什么会有这个单位呢？在没出现视网膜屏幕前，其实并没有设备像素和设备独立像素的区分，因为他们都是一样的。但是当出现了视网膜，甚至更高 PPI 值的屏幕后，屏幕上分布的像素点越来越多，如果用 CSS 的 1 px 来表示设备上的一个物理像素点，并且在低 PPI 屏上正常显示，那么在高 PPI 屏上就会十分小。为了解决这个问题，就区分出两个概念了。</p>
+<p style="text-align: justify">&emsp;&emsp;至于要以多少个设备像素组成一个设备独立像素，需要引入下面的概念来解释。</p>
 
 ### 1.5 设备像素比
+<p style="text-align: justify">&emsp;&emsp;
+<b>DPR（Device Pixel Ratio，设备像素比）</b>是物理像素与设备独立像素之比，表示一个独立像素由多少个物理像素显示。DPR 并不是由开发者可以确定的，而是由屏幕厂商决定的，这是为了让以「px」为单位的软件图像（例如 CSS px）在不同设备有更相似的实际大小。
+</p>
+
+## viewport
 
 ## 2. 媒体查询
 

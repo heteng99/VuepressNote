@@ -8,7 +8,7 @@ module.exports = {
       md.set({
         html: true
       })
-      md.use(require('markdown-it-katex'))
+      md.use(require('markdown-it-mathjax3'))
     },
   },
   "head": [
@@ -26,8 +26,6 @@ module.exports = {
         "content": "width=device-width,initial-scale=1,user-scalable=no"
       }
     ],
-    ['link', { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css' }],
-    ['link', { rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/github-markdown-css/2.2.1/github-markdown.css' }]
   ],
   "theme": "reco",
   "themeConfig": {
