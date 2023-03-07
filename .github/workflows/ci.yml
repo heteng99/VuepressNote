@@ -44,4 +44,5 @@ jobs:
           # 腾讯云默认用户名为root
           REMOTE_USER: ${{ secrets.REMOTE_NAME }} 
           # 目标目录
-          TARGET: "/usr/local/nginx/html" 
+          TARGET: ${{ secrets.REMOTE_PATH }} 
+          
